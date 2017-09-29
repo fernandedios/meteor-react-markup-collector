@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { markdown } from 'markdown';  // in curly braces because the markdown library exports an object that has properties we need to use
+import { markdown } from 'markdown'; 
 
 class BinsViewer extends Component {
   render() {

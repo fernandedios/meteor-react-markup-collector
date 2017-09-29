@@ -4,9 +4,6 @@ class BinsShare extends Component {
   onShareClick() {
     const email = this.refs.email.value;
 
-    // gotcha here, need to add a way to check for duplicate email, not part of the
-    // course anymore
-
     Meteor.call('bins.share', this.props.bin, email);
   }
 

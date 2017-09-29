@@ -7,13 +7,7 @@ import BinsShare from './bins_share';
 
 class BinsMain extends Component {
   render() {
-    // console.log(this.props.params.binId); // passed via path="bins/:binId"
-    // console.log(this.props.bin); // passed via subscription
-
     if(!this.props.bin) { return <div>Loading...</div> }
-
-    // another gotcha here, must check if the bin address is valid,
-    // if not it should either show an error message, or redirect to a error page/index page
 
     return (
       <div>

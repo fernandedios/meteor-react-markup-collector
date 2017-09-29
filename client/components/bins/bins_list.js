@@ -9,13 +9,10 @@ class BinsList extends Component {
     Meteor.call('bins.remove', bin);
   }
 
-  // onClick={() => this.onBinRemove(bin)}
-  // we're using this because we're creating a new fat arrow function for each iteration of the remove button
   // a fat arrow function here ensures we're passing the correct bin
   renderList() {
     return this.props.bins.map(bin => {
-      const url = `/bins/${bin._id}`; // es6 template string
-      //const url = "/bins/" + bin._id;
+      const url = `/bins/${bin._id}`;
 
       return (
         <li className="list-group-item" key={bin._id}>
@@ -30,7 +27,6 @@ class BinsList extends Component {
     });
   }
   render() {
-    //console.log(this.props.bins);
 
     return (
       <ul className="list-group">

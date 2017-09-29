@@ -9,7 +9,6 @@ class Header extends Component {
       // error object param is always returned, followed by
       // whatever 'bins.insert' returns, in this case, the newly created bin's id
       Meteor.call('bins.insert', (error, binId) => {
-        //console.log(bin);
         browserHistory.push(`/bins/${binId}`); // 'push' a new url to the browser history, i.e. navigate to new url
       });
   }
